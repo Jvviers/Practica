@@ -1,0 +1,22 @@
+a
+(:Auto {model: "Q", id: "1", year: "1992", brand: "Infiniti"})
+Plan: "PROFILE"
+Statement: "READ_ONLY"
+Version: "5"
+Planner: "COST"
+Runtime: "SLOTTED"
+Time: 3
+DbHits: 108
+Rows: 1
+Memory (Bytes): 64
+a
+(:Auto {model: "Q", id: "1", year: "1992", brand: "Infiniti"})
+Plan: "PROFILE"
+Statement: "READ_ONLY"
+Version: "5"
+Planner: "COST"
+Runtime: "SLOTTED"
+Time: 3
+DbHits: 108
+Rows: 1
+Memory (Bytes): 64

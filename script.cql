@@ -1,0 +1,9 @@
+PROFILE MATCH (n)-[r]->(m)
+RETURN n,m;
+
+PROFILE MATCH ()-[r]->()
+RETURN r;
+
+PROFILE MATCH (n)
+RETURN n;
+

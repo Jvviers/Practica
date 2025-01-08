@@ -1,0 +1,387 @@
+n, m
+(:Usuario {gender: "gender", last_name: "last_name", ip_address: "ip_address", id: "id", first_name: "first_name", email: "email"}), (:Contacto {country: "country", id: "id", city: "city", phone: "phone"})
+(:Usuario {gender: "Male", last_name: "Malec", ip_address: "77.30.161.223", id: "1", first_name: "Carr", email: "cmalec0@yandex.ru"}), (:Contacto {country: "Russia", id: "1", phone: "9536910647", city: "Neftegorsk"})
+(:Usuario {gender: "Female", last_name: "Eich", ip_address: "181.59.152.171", id: "2", first_name: "Gayel", email: "geich1@rakuten.co.jp"}), (:Contacto {country: "China", id: "2", phone: "4336365095", city: "Chengdong"})
+(:Usuario {gender: "Male", last_name: "Pires", ip_address: "13.63.135.209", id: "3", first_name: "Valentijn", email: "vpires2@gov.uk"}), (:Contacto {country: "Canada", id: "3", phone: "2465031116", city: "Coaticook"})
+(:Usuario {gender: "Male", last_name: "Killich", ip_address: "252.40.156.239", id: "4", first_name: "Martyn", email: "mkillich3@ftc.gov"}), (:Contacto {country: "China", id: "4", phone: "9636697906", city: "Wansheng"})
+(:Usuario {gender: "Male", last_name: "Goosnell", ip_address: "56.144.93.145", id: "5", first_name: "Donnie", email: "dgoosnell4@networkadvertising.org"}), (:Contacto {country: "Finland", id: "5", phone: "9004510699", city: "Haukipudas"})
+(:Usuario {gender: "Female", last_name: "Riha", ip_address: "65.98.229.200", id: "6", first_name: "Antonetta", email: "ariha5@tripod.com"}), (:Contacto {country: "Poland", id: "6", phone: "1291468731", city: "Brusy"})
+(:Usuario {gender: "Genderfluid", last_name: "Bolland", ip_address: "156.40.147.151", id: "7", first_name: "Maybelle", email: "mbolland6@toplist.cz"}), (:Contacto {country: "South Korea", id: "7", phone: "1984437346", city: "Hwaseong-si"})
+(:Usuario {gender: "Female", last_name: "Ubee", ip_address: "73.242.193.133", id: "8", first_name: "Bel", email: "bubee7@pen.io"}), (:Contacto {country: "Portugal", id: "8", phone: "7972771528", city: "Vila Maior"})
+(:Usuario {gender: "Female", last_name: "Guiso", ip_address: "68.21.99.154", id: "9", first_name: "Druci", email: "dguiso8@ocn.ne.jp"}), (:Contacto {country: "Greece", id: "9", phone: "1344623966", city: "Peraía"})
+(:Usuario {gender: "Agender", last_name: "Coleford", ip_address: "222.87.120.230", id: "10", first_name: "Burl", email: "bcoleford9@typepad.com"}), (:Contacto {country: "Indonesia", id: "10", phone: "3443655349", city: "Watubuku"})
+(:Usuario {gender: "Male", last_name: "Willerson", ip_address: "233.72.207.34", id: "11", first_name: "Patrizio", email: "pwillersona@washington.edu"}), (:Contacto {country: "Russia", id: "11", phone: "6608092261", city: "Novyy Uoyan"})
+(:Usuario {gender: "Female", last_name: "Drewe", ip_address: "172.210.55.49", id: "12", first_name: "Queenie", email: "qdreweb@gov.uk"}), (:Contacto {country: "Lithuania", id: "12", city: "Žemaičių Naumiestis", phone: "1109182842"})
+(:Usuario {gender: "Female", last_name: "Willcox", ip_address: "50.139.211.93", id: "13", first_name: "Darcy", email: "dwillcoxc@biglobe.ne.jp"}), (:Contacto {country: "Haiti", id: "13", phone: "5596483715", city: "Gonayiv"})
+(:Usuario {gender: "Male", last_name: "Matyas", ip_address: "189.104.240.119", id: "14", first_name: "Maddie", email: "mmatyasd@360.cn"}), (:Contacto {country: "China", id: "14", phone: "1679551237", city: "Pancheng"})
+(:Usuario {gender: "Female", last_name: "Ramard", ip_address: "131.171.73.57", id: "15", first_name: "Nan", email: "nramarde@elpais.com"}), (:Contacto {country: "Greece", id: "15", phone: "4107170029", city: "Néa Plágia"})
+(:Usuario {gender: "Male", last_name: "Cholwell", ip_address: "193.141.66.199", id: "16", first_name: "Callean", email: "ccholwellf@weather.com"}), (:Contacto {country: "Portugal", id: "16", phone: "5468326019", city: "Sobreira"})
+(:Usuario {gender: "Male", last_name: "Butten", ip_address: "166.15.242.133", id: "17", first_name: "Palm", email: "pbutteng@cloudflare.com"}), (:Contacto {country: "Philippines", id: "17", phone: "8456300746", city: "San Isidro"})
+(:Usuario {gender: "Female", last_name: "Keasey", ip_address: "58.29.211.213", id: "18", first_name: "Appolonia", email: "akeaseyh@over-blog.com"}), (:Contacto {country: "Tanzania", id: "18", phone: "5907130177", city: "Mtwango"})
+(:Usuario {gender: "Female", last_name: "Caudwell", ip_address: "79.94.193.21", id: "19", first_name: "Enriqueta", email: "ecaudwelli@mashable.com"}), (:Contacto {country: "Peru", id: "19", phone: "3381232053", city: "Chingas"})
+(:Usuario {gender: "Male", last_name: "Attwater", ip_address: "142.80.185.77", id: "20", first_name: "Westbrooke", email: "wattwaterj@cmu.edu"}), (:Contacto {country: "Australia", id: "20", phone: "6929431700", city: "Sydney"})
+(:Usuario {gender: "Male", last_name: "Eastes", ip_address: "98.116.209.141", id: "21", first_name: "Broderic", email: "beastesk@opera.com"}), (:Contacto {country: "Ukraine", id: "21", phone: "8798283732", city: "Lebedyn"})
+(:Usuario {gender: "Male", last_name: "Hundy", ip_address: "174.109.47.121", id: "22", first_name: "Rutledge", email: "rhundyl@pagesperso-orange.fr"}), (:Contacto {country: "China", id: "22", phone: "3835524985", city: "Ala"})
+(:Usuario {gender: "Female", last_name: "Motion", ip_address: "60.123.207.5", id: "23", first_name: "Bobinette", email: "bmotionm@csmonitor.com"}), (:Contacto {country: "Canada", id: "23", phone: "3035341165", city: "Flin Flon"})
+(:Usuario {gender: "Male", last_name: "McGuff", ip_address: "119.155.203.233", id: "24", first_name: "Clevey", email: "cmcguffn@hugedomains.com"}), (:Contacto {country: "China", id: "24", phone: "6148842548", city: "Jianjiang"})
+(:Usuario {gender: "Male", last_name: "Lodford", ip_address: "216.108.99.95", id: "25", first_name: "Johnathan", email: "jlodfordo@europa.eu"}), (:Contacto {country: "Portugal", id: "25", phone: "3797573088", city: "Castelões"})
+(:Usuario {gender: "Male", last_name: "Covert", ip_address: "128.196.104.111", id: "26", first_name: "Salvidor", email: "scovertp@ft.com"}), (:Contacto {country: "China", id: "26", phone: "4263043169", city: "Wanzhi"})
+(:Usuario {gender: "Polygender", last_name: "Alpes", ip_address: "118.214.181.75", id: "27", first_name: "Abdul", email: "aalpesq@nps.gov"}), (:Contacto {country: "Poland", id: "27", phone: "2086737974", city: "Maciejowice"})
+(:Usuario {gender: "Female", last_name: "Melhuish", ip_address: "99.213.140.110", id: "28", first_name: "Nolie", email: "nmelhuishr@furl.net"}), (:Contacto {country: "Kazakhstan", id: "28", phone: "1807275668", city: "Shardara"})
+(:Usuario {gender: "Polygender", last_name: "Henriquet", ip_address: "135.121.232.231", id: "29", first_name: "Milt", email: "mhenriquets@ocn.ne.jp"}), (:Contacto {country: "South Africa", id: "29", phone: "3094605501", city: "Bethlehem"})
+(:Usuario {gender: "Female", last_name: "Elman", ip_address: "137.43.224.231", id: "30", first_name: "Olivie", email: "oelmant@lulu.com"}), (:Contacto {country: "Russia", id: "30", phone: "2321453328", city: "Desnogorsk"})
+(:Usuario {gender: "Non-binary", last_name: "Scobie", ip_address: "174.107.252.214", id: "31", first_name: "Kalil", email: "kscobieu@mapquest.com"}), (:Contacto {country: "Russia", id: "31", phone: "7807531937", city: "Sim"})
+(:Usuario {gender: "Male", last_name: "Crucitti", ip_address: "227.42.49.173", id: "32", first_name: "Bjorn", email: "bcrucittiv@ezinearticles.com"}), (:Contacto {country: "Philippines", id: "32", phone: "1156783291", city: "Dungon"})
+(:Usuario {gender: "Male", last_name: "Vanlint", ip_address: "203.13.191.156", id: "33", first_name: "Falito", email: "fvanlintw@arizona.edu"}), (:Contacto {country: "China", id: "33", phone: "4306623491", city: "Fengchan"})
+(:Usuario {gender: "Female", last_name: "Skinley", ip_address: "88.35.44.23", id: "34", first_name: "Gavra", email: "gskinleyx@usa.gov"}), (:Contacto {country: "Slovenia", id: "34", city: "Šmartno pri Litiji", phone: "2236095991"})
+(:Usuario {gender: "Male", last_name: "Billyard", ip_address: "41.46.215.198", id: "35", first_name: "Bernardo", email: "bbillyardy@mtv.com"}), (:Contacto {country: "Azerbaijan", id: "35", city: "Yuxarı Aran", phone: "3801937841"})
+(:Usuario {gender: "Male", last_name: "Maior", ip_address: "168.62.0.90", id: "36", first_name: "Leonidas", email: "lmaiorz@wired.com"}), (:Contacto {country: "Thailand", id: "36", phone: "9026213783", city: "Chum Phuang"})
+(:Usuario {gender: "Female", last_name: "Whall", ip_address: "156.133.86.94", id: "37", first_name: "Marie-jeanne", email: "mwhall10@prlog.org"}), (:Contacto {country: "Mayotte", id: "37", phone: "5226109918", city: "Dembeni"})
+(:Usuario {gender: "Male", last_name: "McCahill", ip_address: "201.196.30.236", id: "38", first_name: "Archibold", email: "amccahill11@example.com"}), (:Contacto {country: "Czech Republic", id: "38", phone: "4586426879", city: "Lysice"})
+(:Usuario {gender: "Female", last_name: "Housam", ip_address: "150.181.79.199", id: "39", first_name: "Carmel", email: "chousam12@mit.edu"}), (:Contacto {country: "Brazil", id: "39", phone: "6208314956", city: "Sarandi"})
+(:Usuario {gender: "Male", last_name: "Beakes", ip_address: "23.150.23.137", id: "40", first_name: "Edward", email: "ebeakes13@bigcartel.com"}), (:Contacto {country: "Philippines", id: "40", phone: "5351074783", city: "Santa Catalina"})
+(:Usuario {gender: "Female", last_name: "Daudray", ip_address: "107.202.177.166", id: "41", first_name: "Rita", email: "rdaudray14@home.pl"}), (:Contacto {country: "Japan", id: "41", phone: "3579412868", city: "Maizuru"})
+(:Usuario {gender: "Male", last_name: "Blease", ip_address: "142.172.60.68", id: "42", first_name: "Finlay", email: "fblease15@edublogs.org"}), (:Contacto {country: "Indonesia", id: "42", phone: "6409434662", city: "Kebonsari"})
+(:Usuario {gender: "Male", last_name: "Kenford", ip_address: "120.240.38.79", id: "43", first_name: "Karoly", email: "kkenford16@dagondesign.com"}), (:Contacto {country: "Argentina", id: "43", phone: "4137797553", city: "La Cocha"})
+(:Usuario {gender: "Male", last_name: "Roblett", ip_address: "217.149.40.178", id: "44", first_name: "Olivero", email: "oroblett17@paypal.com"}), (:Contacto {country: "Kyrgyzstan", id: "44", phone: "3399636149", city: "Bazar-Korgon"})
+(:Usuario {gender: "Male", last_name: "Bunclark", ip_address: "30.121.41.60", id: "45", first_name: "Saunder", email: "sbunclark18@parallels.com"}), (:Contacto {country: "Indonesia", id: "45", phone: "1653094115", city: "Ungaran"})
+(:Usuario {gender: "Female", last_name: "Grattage", ip_address: "209.77.136.233", id: "46", first_name: "Rasia", email: "rgrattage19@indiegogo.com"}), (:Contacto {country: "Thailand", id: "46", phone: "4659812470", city: "Tha Ruea"})
+(:Usuario {gender: "Male", last_name: "Bohlin", ip_address: "19.181.79.186", id: "47", first_name: "Gerri", email: "gbohlin1a@engadget.com"}), (:Contacto {country: "Indonesia", id: "47", phone: "4223487504", city: "Nurabelen"})
+(:Usuario {gender: "Male", last_name: "Drain", ip_address: "32.17.163.104", id: "48", first_name: "Jorgan", email: "jdrain1b@nationalgeographic.com"}), (:Contacto {country: "Philippines", id: "48", phone: "9241199253", city: "Aguisan"})
+(:Usuario {gender: "Male", last_name: "Moulster", ip_address: "65.165.231.238", id: "49", first_name: "Ahmad", email: "amoulster1c@uiuc.edu"}), (:Contacto {country: "Canada", id: "49", phone: "3328187611", city: "Stratford"})
+(:Usuario {gender: "Male", last_name: "Wagge", ip_address: "171.145.109.232", id: "50", first_name: "Farly", email: "fwagge1d@amazon.de"}), (:Contacto {country: "Indonesia", id: "50", phone: "9391827976", city: "Gunajaya"})
+(:Usuario {gender: "gender", last_name: "last_name", ip_address: "ip_address", id: "id", first_name: "first_name", email: "email"}), (:Auto {model: "model", id: "id", year: "year", brand: "brand"})
+(:Usuario {gender: "Male", last_name: "Malec", ip_address: "77.30.161.223", id: "1", first_name: "Carr", email: "cmalec0@yandex.ru"}), (:Auto {model: "Q", id: "1", year: "1992", brand: "Infiniti"})
+(:Usuario {gender: "Female", last_name: "Eich", ip_address: "181.59.152.171", id: "2", first_name: "Gayel", email: "geich1@rakuten.co.jp"}), (:Auto {model: "Esprit", id: "2", year: "1990", brand: "Lotus"})
+(:Usuario {gender: "Male", last_name: "Pires", ip_address: "13.63.135.209", id: "3", first_name: "Valentijn", email: "vpires2@gov.uk"}), (:Auto {model: "F350", id: "3", year: "2007", brand: "Ford"})
+(:Usuario {gender: "Male", last_name: "Killich", ip_address: "252.40.156.239", id: "4", first_name: "Martyn", email: "mkillich3@ftc.gov"}), (:Auto {model: "Escalade", id: "4", year: "2002", brand: "Cadillac"})
+(:Usuario {gender: "Male", last_name: "Goosnell", ip_address: "56.144.93.145", id: "5", first_name: "Donnie", email: "dgoosnell4@networkadvertising.org"}), (:Auto {model: "Cooper", id: "5", year: "2009", brand: "MINI"})
+(:Usuario {gender: "Female", last_name: "Riha", ip_address: "65.98.229.200", id: "6", first_name: "Antonetta", email: "ariha5@tripod.com"}), (:Auto {model: "Lumina", id: "6", year: "1999", brand: "Chevrolet"})
+(:Usuario {gender: "Genderfluid", last_name: "Bolland", ip_address: "156.40.147.151", id: "7", first_name: "Maybelle", email: "mbolland6@toplist.cz"}), (:Auto {model: "Crown Victoria", id: "7", year: "2010", brand: "Ford"})
+(:Usuario {gender: "Female", last_name: "Ubee", ip_address: "73.242.193.133", id: "8", first_name: "Bel", email: "bubee7@pen.io"}), (:Auto {model: "Astro", id: "8", year: "1996", brand: "Chevrolet"})
+(:Usuario {gender: "Female", last_name: "Guiso", ip_address: "68.21.99.154", id: "9", first_name: "Druci", email: "dguiso8@ocn.ne.jp"}), (:Auto {model: "M5", id: "9", year: "2007", brand: "BMW"})
+(:Usuario {gender: "Agender", last_name: "Coleford", ip_address: "222.87.120.230", id: "10", first_name: "Burl", email: "bcoleford9@typepad.com"}), (:Auto {model: "S60", id: "10", year: "2009", brand: "Volvo"})
+(:Usuario {gender: "Male", last_name: "Willerson", ip_address: "233.72.207.34", id: "11", first_name: "Patrizio", email: "pwillersona@washington.edu"}), (:Auto {model: "X6", id: "11", year: "2013", brand: "BMW"})
+(:Usuario {gender: "Female", last_name: "Drewe", ip_address: "172.210.55.49", id: "12", first_name: "Queenie", email: "qdreweb@gov.uk"}), (:Auto {model: "300D", id: "12", year: "1993", brand: "Mercedes-Benz"})
+(:Usuario {gender: "Female", last_name: "Willcox", ip_address: "50.139.211.93", id: "13", first_name: "Darcy", email: "dwillcoxc@biglobe.ne.jp"}), (:Auto {model: "Avalanche 2500", id: "13", year: "2004", brand: "Chevrolet"})
+(:Usuario {gender: "Male", last_name: "Matyas", ip_address: "189.104.240.119", id: "14", first_name: "Maddie", email: "mmatyasd@360.cn"}), (:Auto {model: "9-3", id: "14", year: "2003", brand: "Saab"})
+(:Usuario {gender: "Female", last_name: "Ramard", ip_address: "131.171.73.57", id: "15", first_name: "Nan", email: "nramarde@elpais.com"}), (:Auto {model: "Beetle", id: "15", year: "1967", brand: "Volkswagen"})
+(:Usuario {gender: "Male", last_name: "Cholwell", ip_address: "193.141.66.199", id: "16", first_name: "Callean", email: "ccholwellf@weather.com"}), (:Auto {model: "Ram Van 2500", id: "16", year: "1995", brand: "Dodge"})
+(:Usuario {gender: "Male", last_name: "Butten", ip_address: "166.15.242.133", id: "17", first_name: "Palm", email: "pbutteng@cloudflare.com"}), (:Auto {model: "5 Series", id: "17", year: "2006", brand: "BMW"})
+(:Usuario {gender: "Female", last_name: "Keasey", ip_address: "58.29.211.213", id: "18", first_name: "Appolonia", email: "akeaseyh@over-blog.com"}), (:Auto {model: "Crown Victoria", id: "18", year: "2003", brand: "Ford"})
+(:Usuario {gender: "Female", last_name: "Caudwell", ip_address: "79.94.193.21", id: "19", first_name: "Enriqueta", email: "ecaudwelli@mashable.com"}), (:Auto {model: "Civic Si", id: "19", year: "2005", brand: "Honda"})
+(:Usuario {gender: "Male", last_name: "Attwater", ip_address: "142.80.185.77", id: "20", first_name: "Westbrooke", email: "wattwaterj@cmu.edu"}), (:Auto {model: "Ram Van 1500", id: "20", year: "1999", brand: "Dodge"})
+(:Usuario {gender: "Male", last_name: "Eastes", ip_address: "98.116.209.141", id: "21", first_name: "Broderic", email: "beastesk@opera.com"}), (:Auto {model: "Grand Prix", id: "21", year: "1992", brand: "Pontiac"})
+(:Usuario {gender: "Male", last_name: "Hundy", ip_address: "174.109.47.121", id: "22", first_name: "Rutledge", email: "rhundyl@pagesperso-orange.fr"}), (:Auto {model: "Avalanche 1500", id: "22", year: "2003", brand: "Chevrolet"})
+(:Usuario {gender: "Female", last_name: "Motion", ip_address: "60.123.207.5", id: "23", first_name: "Bobinette", email: "bmotionm@csmonitor.com"}), (:Auto {model: "Stealth", id: "23", year: "1994", brand: "Dodge"})
+(:Usuario {gender: "Male", last_name: "McGuff", ip_address: "119.155.203.233", id: "24", first_name: "Clevey", email: "cmcguffn@hugedomains.com"}), (:Auto {model: "Esprit", id: "24", year: "1989", brand: "Lotus"})
+(:Usuario {gender: "Male", last_name: "Lodford", ip_address: "216.108.99.95", id: "25", first_name: "Johnathan", email: "jlodfordo@europa.eu"}), (:Auto {model: "Vibe", id: "25", year: "2009", brand: "Pontiac"})
+(:Usuario {gender: "Male", last_name: "Covert", ip_address: "128.196.104.111", id: "26", first_name: "Salvidor", email: "scovertp@ft.com"}), (:Auto {model: "Insight", id: "26", year: "2002", brand: "Honda"})
+(:Usuario {gender: "Polygender", last_name: "Alpes", ip_address: "118.214.181.75", id: "27", first_name: "Abdul", email: "aalpesq@nps.gov"}), (:Auto {model: "Town & Country", id: "27", year: "2012", brand: "Chrysler"})
+(:Usuario {gender: "Female", last_name: "Melhuish", ip_address: "99.213.140.110", id: "28", first_name: "Nolie", email: "nmelhuishr@furl.net"}), (:Auto {model: "Jetta", id: "28", year: "2006", brand: "Volkswagen"})
+(:Usuario {gender: "Polygender", last_name: "Henriquet", ip_address: "135.121.232.231", id: "29", first_name: "Milt", email: "mhenriquets@ocn.ne.jp"}), (:Auto {model: "RAV4", id: "29", year: "2008", brand: "Toyota"})
+(:Usuario {gender: "Female", last_name: "Elman", ip_address: "137.43.224.231", id: "30", first_name: "Olivie", email: "oelmant@lulu.com"}), (:Auto {model: "X5", id: "30", year: "2001", brand: "BMW"})
+(:Usuario {gender: "Non-binary", last_name: "Scobie", ip_address: "174.107.252.214", id: "31", first_name: "Kalil", email: "kscobieu@mapquest.com"}), (:Auto {model: "Rally Wagon 2500", id: "31", year: "1993", brand: "GMC"})
+(:Usuario {gender: "Male", last_name: "Crucitti", ip_address: "227.42.49.173", id: "32", first_name: "Bjorn", email: "bcrucittiv@ezinearticles.com"}), (:Auto {model: "Boxster", id: "32", year: "2001", brand: "Porsche"})
+(:Usuario {gender: "Male", last_name: "Vanlint", ip_address: "203.13.191.156", id: "33", first_name: "Falito", email: "fvanlintw@arizona.edu"}), (:Auto {model: "Thunderbird", id: "33", year: "1965", brand: "Ford"})
+(:Usuario {gender: "Female", last_name: "Skinley", ip_address: "88.35.44.23", id: "34", first_name: "Gavra", email: "gskinleyx@usa.gov"}), (:Auto {model: "RL", id: "34", year: "2004", brand: "Acura"})
+(:Usuario {gender: "Male", last_name: "Billyard", ip_address: "41.46.215.198", id: "35", first_name: "Bernardo", email: "bbillyardy@mtv.com"}), (:Auto {model: "Tacoma", id: "35", year: "2001", brand: "Toyota"})
+(:Usuario {gender: "Male", last_name: "Maior", ip_address: "168.62.0.90", id: "36", first_name: "Leonidas", email: "lmaiorz@wired.com"}), (:Auto {model: "Pathfinder", id: "36", year: "1996", brand: "Nissan"})
+(:Usuario {gender: "Female", last_name: "Whall", ip_address: "156.133.86.94", id: "37", first_name: "Marie-jeanne", email: "mwhall10@prlog.org"}), (:Auto {model: "Impreza WRX", id: "37", year: "2011", brand: "Subaru"})
+(:Usuario {gender: "Male", last_name: "McCahill", ip_address: "201.196.30.236", id: "38", first_name: "Archibold", email: "amccahill11@example.com"}), (:Auto {model: "MDX", id: "38", year: "2006", brand: "Acura"})
+(:Usuario {gender: "Female", last_name: "Housam", ip_address: "150.181.79.199", id: "39", first_name: "Carmel", email: "chousam12@mit.edu"}), (:Auto {model: "Tribute", id: "39", year: "2004", brand: "Mazda"})
+(:Usuario {gender: "Male", last_name: "Beakes", ip_address: "23.150.23.137", id: "40", first_name: "Edward", email: "ebeakes13@bigcartel.com"}), (:Auto {model: "Ram Van 2500", id: "40", year: "2001", brand: "Dodge"})
+(:Usuario {gender: "Female", last_name: "Daudray", ip_address: "107.202.177.166", id: "41", first_name: "Rita", email: "rdaudray14@home.pl"}), (:Auto {model: "Achieva", id: "41", year: "1992", brand: "Oldsmobile"})
+(:Usuario {gender: "Male", last_name: "Blease", ip_address: "142.172.60.68", id: "42", first_name: "Finlay", email: "fblease15@edublogs.org"}), (:Auto {model: "Ram Van B250", id: "42", year: "1994", brand: "Dodge"})
+(:Usuario {gender: "Male", last_name: "Kenford", ip_address: "120.240.38.79", id: "43", first_name: "Karoly", email: "kkenford16@dagondesign.com"}), (:Auto {model: "Colorado", id: "43", year: "2004", brand: "Chevrolet"})
+(:Usuario {gender: "Male", last_name: "Roblett", ip_address: "217.149.40.178", id: "44", first_name: "Olivero", email: "oroblett17@paypal.com"}), (:Auto {model: "CR-V", id: "44", year: "2005", brand: "Honda"})
+(:Usuario {gender: "Male", last_name: "Bunclark", ip_address: "30.121.41.60", id: "45", first_name: "Saunder", email: "sbunclark18@parallels.com"}), (:Auto {model: "Flex", id: "45", year: "2009", brand: "Ford"})
+(:Usuario {gender: "Female", last_name: "Grattage", ip_address: "209.77.136.233", id: "46", first_name: "Rasia", email: "rgrattage19@indiegogo.com"}), (:Auto {model: "GTI", id: "46", year: "2008", brand: "Volkswagen"})
+(:Usuario {gender: "Male", last_name: "Bohlin", ip_address: "19.181.79.186", id: "47", first_name: "Gerri", email: "gbohlin1a@engadget.com"}), (:Auto {model: "Celica", id: "47", year: "1976", brand: "Toyota"})
+(:Usuario {gender: "Male", last_name: "Drain", ip_address: "32.17.163.104", id: "48", first_name: "Jorgan", email: "jdrain1b@nationalgeographic.com"}), (:Auto {model: "Savana", id: "48", year: "2010", brand: "GMC"})
+(:Usuario {gender: "Male", last_name: "Moulster", ip_address: "65.165.231.238", id: "49", first_name: "Ahmad", email: "amoulster1c@uiuc.edu"}), (:Auto {model: "FX", id: "49", year: "2003", brand: "Infiniti"})
+(:Usuario {gender: "Male", last_name: "Wagge", ip_address: "171.145.109.232", id: "50", first_name: "Farly", email: "fwagge1d@amazon.de"}), (:Auto {model: "Cougar", id: "50", year: "1997", brand: "Mercury"})
+Plan: "PROFILE"
+Statement: "READ_ONLY"
+Version: "5"
+Planner: "COST"
+Runtime: "SLOTTED"
+Time: 7
+DbHits: 1326
+Rows: 102
+Memory (Bytes): 64
+r
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:HAS_CONTACT]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+[:OWNS]
+Plan: "PROFILE"
+Statement: "READ_ONLY"
+Version: "5"
+Planner: "COST"
+Runtime: "SLOTTED"
+Time: 5
+DbHits: 204
+Rows: 102
+Memory (Bytes): 64
+n
+(:Contacto {country: "country", id: "id", city: "city", phone: "phone"})
+(:Contacto {country: "Russia", id: "1", phone: "9536910647", city: "Neftegorsk"})
+(:Contacto {country: "China", id: "2", phone: "4336365095", city: "Chengdong"})
+(:Contacto {country: "Canada", id: "3", phone: "2465031116", city: "Coaticook"})
+(:Contacto {country: "China", id: "4", phone: "9636697906", city: "Wansheng"})
+(:Contacto {country: "Finland", id: "5", phone: "9004510699", city: "Haukipudas"})
+(:Contacto {country: "Poland", id: "6", phone: "1291468731", city: "Brusy"})
+(:Contacto {country: "South Korea", id: "7", phone: "1984437346", city: "Hwaseong-si"})
+(:Contacto {country: "Portugal", id: "8", phone: "7972771528", city: "Vila Maior"})
+(:Contacto {country: "Greece", id: "9", phone: "1344623966", city: "Peraía"})
+(:Contacto {country: "Indonesia", id: "10", phone: "3443655349", city: "Watubuku"})
+(:Contacto {country: "Russia", id: "11", phone: "6608092261", city: "Novyy Uoyan"})
+(:Contacto {country: "Lithuania", id: "12", city: "Žemaičių Naumiestis", phone: "1109182842"})
+(:Contacto {country: "Haiti", id: "13", phone: "5596483715", city: "Gonayiv"})
+(:Contacto {country: "China", id: "14", phone: "1679551237", city: "Pancheng"})
+(:Contacto {country: "Greece", id: "15", phone: "4107170029", city: "Néa Plágia"})
+(:Contacto {country: "Portugal", id: "16", phone: "5468326019", city: "Sobreira"})
+(:Contacto {country: "Philippines", id: "17", phone: "8456300746", city: "San Isidro"})
+(:Contacto {country: "Tanzania", id: "18", phone: "5907130177", city: "Mtwango"})
+(:Contacto {country: "Peru", id: "19", phone: "3381232053", city: "Chingas"})
+(:Contacto {country: "Australia", id: "20", phone: "6929431700", city: "Sydney"})
+(:Contacto {country: "Ukraine", id: "21", phone: "8798283732", city: "Lebedyn"})
+(:Contacto {country: "China", id: "22", phone: "3835524985", city: "Ala"})
+(:Contacto {country: "Canada", id: "23", phone: "3035341165", city: "Flin Flon"})
+(:Contacto {country: "China", id: "24", phone: "6148842548", city: "Jianjiang"})
+(:Contacto {country: "Portugal", id: "25", phone: "3797573088", city: "Castelões"})
+(:Contacto {country: "China", id: "26", phone: "4263043169", city: "Wanzhi"})
+(:Contacto {country: "Poland", id: "27", phone: "2086737974", city: "Maciejowice"})
+(:Contacto {country: "Kazakhstan", id: "28", phone: "1807275668", city: "Shardara"})
+(:Contacto {country: "South Africa", id: "29", phone: "3094605501", city: "Bethlehem"})
+(:Contacto {country: "Russia", id: "30", phone: "2321453328", city: "Desnogorsk"})
+(:Contacto {country: "Russia", id: "31", phone: "7807531937", city: "Sim"})
+(:Contacto {country: "Philippines", id: "32", phone: "1156783291", city: "Dungon"})
+(:Contacto {country: "China", id: "33", phone: "4306623491", city: "Fengchan"})
+(:Contacto {country: "Slovenia", id: "34", city: "Šmartno pri Litiji", phone: "2236095991"})
+(:Contacto {country: "Azerbaijan", id: "35", city: "Yuxarı Aran", phone: "3801937841"})
+(:Contacto {country: "Thailand", id: "36", phone: "9026213783", city: "Chum Phuang"})
+(:Contacto {country: "Mayotte", id: "37", phone: "5226109918", city: "Dembeni"})
+(:Contacto {country: "Czech Republic", id: "38", phone: "4586426879", city: "Lysice"})
+(:Contacto {country: "Brazil", id: "39", phone: "6208314956", city: "Sarandi"})
+(:Contacto {country: "Philippines", id: "40", phone: "5351074783", city: "Santa Catalina"})
+(:Contacto {country: "Japan", id: "41", phone: "3579412868", city: "Maizuru"})
+(:Contacto {country: "Indonesia", id: "42", phone: "6409434662", city: "Kebonsari"})
+(:Contacto {country: "Argentina", id: "43", phone: "4137797553", city: "La Cocha"})
+(:Contacto {country: "Kyrgyzstan", id: "44", phone: "3399636149", city: "Bazar-Korgon"})
+(:Contacto {country: "Indonesia", id: "45", phone: "1653094115", city: "Ungaran"})
+(:Contacto {country: "Thailand", id: "46", phone: "4659812470", city: "Tha Ruea"})
+(:Contacto {country: "Indonesia", id: "47", phone: "4223487504", city: "Nurabelen"})
+(:Contacto {country: "Philippines", id: "48", phone: "9241199253", city: "Aguisan"})
+(:Contacto {country: "Canada", id: "49", phone: "3328187611", city: "Stratford"})
+(:Contacto {country: "Indonesia", id: "50", phone: "9391827976", city: "Gunajaya"})
+(:Auto {model: "model", id: "id", year: "year", brand: "brand"})
+(:Auto {model: "Q", id: "1", year: "1992", brand: "Infiniti"})
+(:Auto {model: "Esprit", id: "2", year: "1990", brand: "Lotus"})
+(:Auto {model: "F350", id: "3", year: "2007", brand: "Ford"})
+(:Auto {model: "Escalade", id: "4", year: "2002", brand: "Cadillac"})
+(:Auto {model: "Cooper", id: "5", year: "2009", brand: "MINI"})
+(:Auto {model: "Lumina", id: "6", year: "1999", brand: "Chevrolet"})
+(:Auto {model: "Crown Victoria", id: "7", year: "2010", brand: "Ford"})
+(:Auto {model: "Astro", id: "8", year: "1996", brand: "Chevrolet"})
+(:Auto {model: "M5", id: "9", year: "2007", brand: "BMW"})
+(:Auto {model: "S60", id: "10", year: "2009", brand: "Volvo"})
+(:Auto {model: "X6", id: "11", year: "2013", brand: "BMW"})
+(:Auto {model: "300D", id: "12", year: "1993", brand: "Mercedes-Benz"})
+(:Auto {model: "Avalanche 2500", id: "13", year: "2004", brand: "Chevrolet"})
+(:Auto {model: "9-3", id: "14", year: "2003", brand: "Saab"})
+(:Auto {model: "Beetle", id: "15", year: "1967", brand: "Volkswagen"})
+(:Auto {model: "Ram Van 2500", id: "16", year: "1995", brand: "Dodge"})
+(:Auto {model: "5 Series", id: "17", year: "2006", brand: "BMW"})
+(:Auto {model: "Crown Victoria", id: "18", year: "2003", brand: "Ford"})
+(:Auto {model: "Civic Si", id: "19", year: "2005", brand: "Honda"})
+(:Auto {model: "Ram Van 1500", id: "20", year: "1999", brand: "Dodge"})
+(:Auto {model: "Grand Prix", id: "21", year: "1992", brand: "Pontiac"})
+(:Auto {model: "Avalanche 1500", id: "22", year: "2003", brand: "Chevrolet"})
+(:Auto {model: "Stealth", id: "23", year: "1994", brand: "Dodge"})
+(:Auto {model: "Esprit", id: "24", year: "1989", brand: "Lotus"})
+(:Auto {model: "Vibe", id: "25", year: "2009", brand: "Pontiac"})
+(:Auto {model: "Insight", id: "26", year: "2002", brand: "Honda"})
+(:Auto {model: "Town & Country", id: "27", year: "2012", brand: "Chrysler"})
+(:Auto {model: "Jetta", id: "28", year: "2006", brand: "Volkswagen"})
+(:Auto {model: "RAV4", id: "29", year: "2008", brand: "Toyota"})
+(:Auto {model: "X5", id: "30", year: "2001", brand: "BMW"})
+(:Auto {model: "Rally Wagon 2500", id: "31", year: "1993", brand: "GMC"})
+(:Auto {model: "Boxster", id: "32", year: "2001", brand: "Porsche"})
+(:Auto {model: "Thunderbird", id: "33", year: "1965", brand: "Ford"})
+(:Auto {model: "RL", id: "34", year: "2004", brand: "Acura"})
+(:Auto {model: "Tacoma", id: "35", year: "2001", brand: "Toyota"})
+(:Auto {model: "Pathfinder", id: "36", year: "1996", brand: "Nissan"})
+(:Auto {model: "Impreza WRX", id: "37", year: "2011", brand: "Subaru"})
+(:Auto {model: "MDX", id: "38", year: "2006", brand: "Acura"})
+(:Auto {model: "Tribute", id: "39", year: "2004", brand: "Mazda"})
+(:Auto {model: "Ram Van 2500", id: "40", year: "2001", brand: "Dodge"})
+(:Auto {model: "Achieva", id: "41", year: "1992", brand: "Oldsmobile"})
+(:Auto {model: "Ram Van B250", id: "42", year: "1994", brand: "Dodge"})
+(:Auto {model: "Colorado", id: "43", year: "2004", brand: "Chevrolet"})
+(:Auto {model: "CR-V", id: "44", year: "2005", brand: "Honda"})
+(:Auto {model: "Flex", id: "45", year: "2009", brand: "Ford"})
+(:Auto {model: "GTI", id: "46", year: "2008", brand: "Volkswagen"})
+(:Auto {model: "Celica", id: "47", year: "1976", brand: "Toyota"})
+(:Auto {model: "Savana", id: "48", year: "2010", brand: "GMC"})
+(:Auto {model: "FX", id: "49", year: "2003", brand: "Infiniti"})
+(:Auto {model: "Cougar", id: "50", year: "1997", brand: "Mercury"})
+(:Usuario {gender: "gender", last_name: "last_name", ip_address: "ip_address", id: "id", first_name: "first_name", email: "email"})
+(:Usuario {gender: "Male", last_name: "Malec", ip_address: "77.30.161.223", id: "1", first_name: "Carr", email: "cmalec0@yandex.ru"})
+(:Usuario {gender: "Female", last_name: "Eich", ip_address: "181.59.152.171", id: "2", first_name: "Gayel", email: "geich1@rakuten.co.jp"})
+(:Usuario {gender: "Male", last_name: "Pires", ip_address: "13.63.135.209", id: "3", first_name: "Valentijn", email: "vpires2@gov.uk"})
+(:Usuario {gender: "Male", last_name: "Killich", ip_address: "252.40.156.239", id: "4", first_name: "Martyn", email: "mkillich3@ftc.gov"})
+(:Usuario {gender: "Male", last_name: "Goosnell", ip_address: "56.144.93.145", id: "5", first_name: "Donnie", email: "dgoosnell4@networkadvertising.org"})
+(:Usuario {gender: "Female", last_name: "Riha", ip_address: "65.98.229.200", id: "6", first_name: "Antonetta", email: "ariha5@tripod.com"})
+(:Usuario {gender: "Genderfluid", last_name: "Bolland", ip_address: "156.40.147.151", id: "7", first_name: "Maybelle", email: "mbolland6@toplist.cz"})
+(:Usuario {gender: "Female", last_name: "Ubee", ip_address: "73.242.193.133", id: "8", first_name: "Bel", email: "bubee7@pen.io"})
+(:Usuario {gender: "Female", last_name: "Guiso", ip_address: "68.21.99.154", id: "9", first_name: "Druci", email: "dguiso8@ocn.ne.jp"})
+(:Usuario {gender: "Agender", last_name: "Coleford", ip_address: "222.87.120.230", id: "10", first_name: "Burl", email: "bcoleford9@typepad.com"})
+(:Usuario {gender: "Male", last_name: "Willerson", ip_address: "233.72.207.34", id: "11", first_name: "Patrizio", email: "pwillersona@washington.edu"})
+(:Usuario {gender: "Female", last_name: "Drewe", ip_address: "172.210.55.49", id: "12", first_name: "Queenie", email: "qdreweb@gov.uk"})
+(:Usuario {gender: "Female", last_name: "Willcox", ip_address: "50.139.211.93", id: "13", first_name: "Darcy", email: "dwillcoxc@biglobe.ne.jp"})
+(:Usuario {gender: "Male", last_name: "Matyas", ip_address: "189.104.240.119", id: "14", first_name: "Maddie", email: "mmatyasd@360.cn"})
+(:Usuario {gender: "Female", last_name: "Ramard", ip_address: "131.171.73.57", id: "15", first_name: "Nan", email: "nramarde@elpais.com"})
+(:Usuario {gender: "Male", last_name: "Cholwell", ip_address: "193.141.66.199", id: "16", first_name: "Callean", email: "ccholwellf@weather.com"})
+(:Usuario {gender: "Male", last_name: "Butten", ip_address: "166.15.242.133", id: "17", first_name: "Palm", email: "pbutteng@cloudflare.com"})
+(:Usuario {gender: "Female", last_name: "Keasey", ip_address: "58.29.211.213", id: "18", first_name: "Appolonia", email: "akeaseyh@over-blog.com"})
+(:Usuario {gender: "Female", last_name: "Caudwell", ip_address: "79.94.193.21", id: "19", first_name: "Enriqueta", email: "ecaudwelli@mashable.com"})
+(:Usuario {gender: "Male", last_name: "Attwater", ip_address: "142.80.185.77", id: "20", first_name: "Westbrooke", email: "wattwaterj@cmu.edu"})
+(:Usuario {gender: "Male", last_name: "Eastes", ip_address: "98.116.209.141", id: "21", first_name: "Broderic", email: "beastesk@opera.com"})
+(:Usuario {gender: "Male", last_name: "Hundy", ip_address: "174.109.47.121", id: "22", first_name: "Rutledge", email: "rhundyl@pagesperso-orange.fr"})
+(:Usuario {gender: "Female", last_name: "Motion", ip_address: "60.123.207.5", id: "23", first_name: "Bobinette", email: "bmotionm@csmonitor.com"})
+(:Usuario {gender: "Male", last_name: "McGuff", ip_address: "119.155.203.233", id: "24", first_name: "Clevey", email: "cmcguffn@hugedomains.com"})
+(:Usuario {gender: "Male", last_name: "Lodford", ip_address: "216.108.99.95", id: "25", first_name: "Johnathan", email: "jlodfordo@europa.eu"})
+(:Usuario {gender: "Male", last_name: "Covert", ip_address: "128.196.104.111", id: "26", first_name: "Salvidor", email: "scovertp@ft.com"})
+(:Usuario {gender: "Polygender", last_name: "Alpes", ip_address: "118.214.181.75", id: "27", first_name: "Abdul", email: "aalpesq@nps.gov"})
+(:Usuario {gender: "Female", last_name: "Melhuish", ip_address: "99.213.140.110", id: "28", first_name: "Nolie", email: "nmelhuishr@furl.net"})
+(:Usuario {gender: "Polygender", last_name: "Henriquet", ip_address: "135.121.232.231", id: "29", first_name: "Milt", email: "mhenriquets@ocn.ne.jp"})
+(:Usuario {gender: "Female", last_name: "Elman", ip_address: "137.43.224.231", id: "30", first_name: "Olivie", email: "oelmant@lulu.com"})
+(:Usuario {gender: "Non-binary", last_name: "Scobie", ip_address: "174.107.252.214", id: "31", first_name: "Kalil", email: "kscobieu@mapquest.com"})
+(:Usuario {gender: "Male", last_name: "Crucitti", ip_address: "227.42.49.173", id: "32", first_name: "Bjorn", email: "bcrucittiv@ezinearticles.com"})
+(:Usuario {gender: "Male", last_name: "Vanlint", ip_address: "203.13.191.156", id: "33", first_name: "Falito", email: "fvanlintw@arizona.edu"})
+(:Usuario {gender: "Female", last_name: "Skinley", ip_address: "88.35.44.23", id: "34", first_name: "Gavra", email: "gskinleyx@usa.gov"})
+(:Usuario {gender: "Male", last_name: "Billyard", ip_address: "41.46.215.198", id: "35", first_name: "Bernardo", email: "bbillyardy@mtv.com"})
+(:Usuario {gender: "Male", last_name: "Maior", ip_address: "168.62.0.90", id: "36", first_name: "Leonidas", email: "lmaiorz@wired.com"})
+(:Usuario {gender: "Female", last_name: "Whall", ip_address: "156.133.86.94", id: "37", first_name: "Marie-jeanne", email: "mwhall10@prlog.org"})
+(:Usuario {gender: "Male", last_name: "McCahill", ip_address: "201.196.30.236", id: "38", first_name: "Archibold", email: "amccahill11@example.com"})
+(:Usuario {gender: "Female", last_name: "Housam", ip_address: "150.181.79.199", id: "39", first_name: "Carmel", email: "chousam12@mit.edu"})
+(:Usuario {gender: "Male", last_name: "Beakes", ip_address: "23.150.23.137", id: "40", first_name: "Edward", email: "ebeakes13@bigcartel.com"})
+(:Usuario {gender: "Female", last_name: "Daudray", ip_address: "107.202.177.166", id: "41", first_name: "Rita", email: "rdaudray14@home.pl"})
+(:Usuario {gender: "Male", last_name: "Blease", ip_address: "142.172.60.68", id: "42", first_name: "Finlay", email: "fblease15@edublogs.org"})
+(:Usuario {gender: "Male", last_name: "Kenford", ip_address: "120.240.38.79", id: "43", first_name: "Karoly", email: "kkenford16@dagondesign.com"})
+(:Usuario {gender: "Male", last_name: "Roblett", ip_address: "217.149.40.178", id: "44", first_name: "Olivero", email: "oroblett17@paypal.com"})
+(:Usuario {gender: "Male", last_name: "Bunclark", ip_address: "30.121.41.60", id: "45", first_name: "Saunder", email: "sbunclark18@parallels.com"})
+(:Usuario {gender: "Female", last_name: "Grattage", ip_address: "209.77.136.233", id: "46", first_name: "Rasia", email: "rgrattage19@indiegogo.com"})
+(:Usuario {gender: "Male", last_name: "Bohlin", ip_address: "19.181.79.186", id: "47", first_name: "Gerri", email: "gbohlin1a@engadget.com"})
+(:Usuario {gender: "Male", last_name: "Drain", ip_address: "32.17.163.104", id: "48", first_name: "Jorgan", email: "jdrain1b@nationalgeographic.com"})
+(:Usuario {gender: "Male", last_name: "Moulster", ip_address: "65.165.231.238", id: "49", first_name: "Ahmad", email: "amoulster1c@uiuc.edu"})
+(:Usuario {gender: "Male", last_name: "Wagge", ip_address: "171.145.109.232", id: "50", first_name: "Farly", email: "fwagge1d@amazon.de"})
+Plan: "PROFILE"
+Statement: "READ_ONLY"
+Version: "5"
+Planner: "COST"
+Runtime: "SLOTTED"
+Time: 3
+DbHits: 1021
+Rows: 153
+Memory (Bytes): 64

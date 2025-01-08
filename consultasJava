@@ -1,0 +1,64 @@
+//consultas A.B
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:knows]->() return count(p);
+match p = (n{id: 'p4'})-[:knows]->()-[:studyAt]->() return count(p);
+match p = (n{id: 'f38'})-[:containerOf]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'f38'})-[:containerOf]->()-[:hasCreator]->() return count(p);
+match p = (n{id: 'f41'})-[:hasMember]->()-[:workAt]->() return count(p);
+match p = (n{id: 'f41'})-[:hasMember]->()-[:hasInterest]->() return count(p);
+match p = (n{id: 'p4'})-[:knows]->()-[:knows]->() return count(p);
+match p = (n{id: 'f41'})-[:hasMember]->()-[:likes]->() return count(p);
+match p = (n{id: 'p4'})-[:knows]->()-[:likes]->() return count(p);
+//consultas A.B.C
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:knows]->()-[:isLocatedIn]->() return count(p);
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:knows]->()-[:studyAt]->() return count(p);
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:likes]->()-[:replyOf]->() return count(p);
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:likes]->()-[:hasCreator]->() return count(p);
+match p = (n{id: 'p907'})-[:likes]->()-[:hasCreator]->()-[:isLocatedIn]->() return count(p);
+match p = (n{id: 'p907'})-[:likes]->()-[:replyOf]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:knows]->()-[:knows] return count(p);
+match p = (n{id: 'f38'})-[:containerOf]->()-[:hasCreator]->()-[:knows] return count(p);
+match p = (n{id: 'm135702'})-[:hasCreator]->()-[:likes]->()-[:replyOf]->() return count(p);
+//consultasA+.B
+match p = (n{id: 'm135710'})-[:replyOf*1..4]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*1..4]->()-[:studyAt]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*1..4]->()-[:isLocatedIn]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*1..4]->()-[:likes]->() return count(p);
+//consultasA.B+
+match p = (n{id: 'm135710'})-[:replyOf]->()-[:replyOf*1..4]->() return count(p);
+match p = (n{id: 't0'})-[:hasType]->()-[:isSubclassOf*1..4]->() return count(p);
+match p = (n{id: 'p907'})-[:likes]->()-[:replyOf*1..4]->() return count(p);
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:knows*1..4]->() return count(p);
+match p = (n{id: 'f41'})-[:hasMember]->()-[:knows*1..4]->() return count(p);
+//consultasC|A+
+match p = (n{id: 'm135710'})-[:likes | replyOf*1..4]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'm135710'})-[:hasType | isSubclassOf*1..4]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'm135710'})-[:isSubclassOf | isSubclassOf*1..4]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'm135710'})-[:hasModerator | knows*1..4]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'm135710'})-[:knows | knows*1..4]->()-[:hasTag]->() return count(p);
+//consultasC(A|B)
+match p = (n{id: 'm135710'})-[:replyOf]->()-[:replyOf|likes]->() return count(p);
+match p = (n{id: 'm135702'})-[:hasCreator]->()-[:studyAt|workAt]->() return count(p);
+match p = (n{id: 'm135702'})-[:hasCreator]->()-[:knows|studyAt]->() return count(p);
+match p = (n{id: 'm135702'})-[:hasCreator]->()-[:knows|workAt]->() return count(p);
+match p = (n{id: 'p4'})-[:knows]->()-[:hasInterest|likes]->() return count(p);
+match p = (n{id: 'p4'})-[:knows]->()-[:knows|likes]->() return count(p);
+//consultasA+
+match p = (n{id: 'tc0'})-[:isSubclassOf*1..4]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*1..4]->() return count(p);
+match p = (n{id: 'm135719'})-[:replyOf*1..4]->() return count(p);
+//consultasA*B
+match p = (n{id: 'm135710'})-[:replyOf*0..4]->()-[:hasTag]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*0..4]->()-[:studyAt]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*0..4]->()-[:isLocatedIn]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*0..4]->()-[:likes]->() return count(p);
+//consultasAB*
+match p = (n{id: 'm135710'})-[:replyOf]->()-[:replyOf*0..4]->() return count(p);
+match p = (n{id: 't0'})-[:hasType]->()-[:isSubclassOf*0..4]->() return count(p);
+match p = (n{id: 'p907'})-[:likes]->()-[:replyOf*0..4]->() return count(p);
+match p = (n{id: 'f0'})-[:hasModerator]->()-[:knows*0..4]->() return count(p);
+match p = (n{id: 'f41'})-[:hasMember]->()-[:knows*0..4]->() return count(p);
+//consultasA*
+match p = (n{id: 'tc0'})-[:isSubclassOf*0..4]->() return count(p);
+match p = (n{id: 'p4'})-[:knows*0..4]->() return count(p);
+match p = (n{id: 'm135719'})-[:replyOf*0..4]->() return count(p);
+
