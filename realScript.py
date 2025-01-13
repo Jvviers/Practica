@@ -13,15 +13,19 @@ def read_queries(file_path):
         print(f"Error al leer el archivo: {e}")
         sys.exit(1)
 
-def execute_query(query):
-    comands = "echo " + query + " cypher-shell -u neo4j -p neo4j2024"
+def execute_query(i, query):
+    comands = "echo \"" + query * 3 + "\" | cypher-shell -u neo4j -p neo4j2024"
     result = subprocess.run(comands, shell=True, text=True, capture_output=True)
-    res = result.stdout
-    er = result.stderr
-    lines = res.split("\n")
-    count = lines[1] 
-    time = lines[-4]
-    return query, "COUNT: " + count, "TIME: " + time
+    res = str(result.stdout)
+    er = str(result.stderr)
+    lines = res.splitlines()
+    count = lines[1]
+    time = int (lines[-4].split(":")[1])
+    time2 = int (lines[-15].split(":")[1])
+    time3 = int (lines[-26].split(":")[1])
+    time  = min(time, time2, time3)
+    time = round (time/1000,3)
+    return str (i+1) + " " + query + " COUNT: " + str (count) + " TIME: " + str (time) + "\n"
 
 
 # Guardar resultados en un archivo
@@ -34,14 +38,14 @@ def save_results(results, file_path):
         sys.exit(1)
 
 def main():
-    queries = read_queries(ArchivoPruebaConsulta) 
+    queries = read_queries("inputWalk") 
     results = []
     for i, query in enumerate(queries):
-        res = execute_query(query)
+        res = execute_query(i, query)
         results.append(res)
         print (res)
-        
-    save_results(results, output_file)
+
+    save_results(results, "output_file")
 
 if __name__ == "__main__":
     main()

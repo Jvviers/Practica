@@ -1,0 +1,1 @@
+profile match p = (n {id: 'p4'})-[]->() return count (p);
