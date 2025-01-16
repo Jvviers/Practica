@@ -1,0 +1,154 @@
+profile match  p = (n:Nodes{ id: 'm324826'})-[:hasCreator]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f0'})-[:hasModerator]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f97'})-[:hasMember]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f43'})-[:containerOf]->()-[:hasCreator]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows]->()-[:likes]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f97'})-[:hasMember]->()-[:likes]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'm324826'})-[:hasCreator]->()-[:isLocatedIn]->()-[:isPartOf]->() return count(p);
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf]->()-[:hasCreator]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f0'})-[:hasModerator]->()-[:knows]->()-[:knows]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p2568'})-[:likes]->()-[:hasCreator]->()-[:workAt]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows]->()-[:knows]->()-[:likes]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f97'})-[:hasMember]->()-[:knows]->()-[:likes]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf*1..4]->()-[:replyOf]->() return count(p);
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf*1..4]->()-[:isSubclassOf]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*1..4]->()-[:studyAt]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*1..4]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*1..4]->()-[:knows]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*1..4]->()-[:likes]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf]->()-[:replyOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf]->()-[:isSubclassOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 't0'})-[:hasType]->()-[:isSubclassOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p2568'})-[:likes]->()-[:replyOf*1..4]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'm324834'})-[:hasCreator|knows*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f0'})-[:hasModerator|knows*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf|replyOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf|isSubclassOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p2568'})-[:likes|replyOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows|knows*1..4]->() return count(p);
+
+
+
+
+
+
+
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf]->()-[:hasCreator|hasInterest]->() return count(p);
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf]->()-[:hasCreator|likes]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p2568'})-[:likes]->()-[:replyOf|hasInterest]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p2568'})-[:likes]->()-[:replyOf|likes]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f97'})-[:hasMember]->()-[:hasInterest|likes]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f97'})-[:hasMember]->()-[:knows|likes]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*1..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf*1..4]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf*0..4]->()-[:replyOf]->() return count(p);
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf*0..4]->()-[:isSubclassOf]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*0..4]->()-[:studyAt]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*0..4]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*0..4]->()-[:hasInterest]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*0..4]->()-[:likes]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf]->()-[:replyOf*0..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf]->()-[:isSubclassOf*0..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'f97'})-[:hasMember]->()-[:knows*0..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p2568'})-[:likes]->()-[:replyOf*0..4]->() return count(p);
+
+profile match  p = (n:Nodes{ id: 'tc0'})-[:isSubclassOf*0..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'p1'})-[:knows*0..4]->() return count(p);
+profile match  p = (n:Nodes{ id: 'm324834'})-[:replyOf*0..4]->() return count(p);
+
+
+
+
+
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[:hasCreator]->()-[:studyAt * 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'pL6'})-[:isPartOf]->()-[:isPartOf* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember]->()-[:studyAt* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember]->()-[:isLocatedIn* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember]->()-[:knows* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[:knows]->()-[:likes* 0..1]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'f43'})-[:containerOf*0..1 ]->()-[:hasTag]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f0'})-[:hasModerator*0..1 ]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember*0..1 ]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[:knows*0..1 ]->()-[:isLocatedIn]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember*0..1 ]->()-[:knows]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[:knows *0..1 ]->()-[:likes]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[:hasCreator | isLocatedIn]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324834'})-[:replyOf | hasCreator ]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember| hasModerator]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p26'})-[:hasInterest | knows]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[:likes | workAt]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[:likes | hasInterest ]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[:isLocatedIn | studyAt]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324826'})-[:isLocatedIn | workAt]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f43'})-[:containerOf | hasModerator]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f43'})-[:containerOf | hasMember]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p26'})-[:hasInterest | likes ]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[:knows| hasInterest]->() return count(p);
+
+
+
+
+
+
+
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[:isLocatedIn| knows | hasInterest ]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324826'})-[:isLocatedIn| knows| likes ]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p26'})-[:hasInterest| workAt| studyAt]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p13'})-[:workAt| likes | isLocatedIn]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p0'})-[:studyAt| likes| hasInterest]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[:likes | knows | hasInterest]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324834'})-[: hasTag | replyOf * 1..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324834'})-[: hasCreator| replyOf * 1..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: studyAt| knows* 1..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: workAt| knows* 1..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: likes | knows* 1..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: hasInterest| knows* 1..4]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324834'})-[: hasTag | replyOf * 0..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324834'})-[: hasCreator| replyOf * 0..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: studyAt| knows* 0..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: workAt| knows* 0..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: likes | knows* 0..4]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: hasInterest| knows* 0..4]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[: hasTag| hasCreator* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324826'})-[: hasInterest | isLocatedIn * 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: isLocatedIn |  knows* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: studyAt | knows* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[: hasInterest | likes * 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[:  likes | likes * 0..1]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[: hasCreator| hasTag* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324826'})-[: isLocatedIn | hasInterest * 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: knows |  isLocatedIn* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p1'})-[: knows | studyAt* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[: likes | hasInterest * 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[: likes | likes * 0..1]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'p26'})-[:hasInterest* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f212'})-[:hasTag* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p0'})-[:studyAt* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p13'})-[:workAt* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'f97'})-[:hasMember* 0..1]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324834'})-[:replyOf* 0..1]->() return count(p);
+
+profile match  p = (n :Nodes{ id: 'm324826'})-[:isLocatedIn|hasInterest|knows]->() return count(p);
+profile match  p = (n :Nodes{ id: 'm324826'})-[:isLocatedIn|hasInterest|workAt]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p13'})-[:workAt|hasInterest|studyAt]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p13'})-[:workAt|isLocatedIn|hasInterest]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[:likes|isLocatedIn|hasInterest]->() return count(p);
+profile match  p = (n :Nodes{ id: 'p2568'})-[:likes|hasInterest|workAt]->() return count(p);

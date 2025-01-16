@@ -38,14 +38,14 @@ def save_results(results, file_path):
         sys.exit(1)
 
 def main():
-    queries = read_queries("inputWalk") 
+    queries = read_queries("consultasbd03") 
     results = []
     for i, query in enumerate(queries):
         res = execute_query(i, query)
         results.append(res)
         print (res)
 
-    save_results(results, "output_file")
+    save_results(results, "output_filebd03")
 
 if __name__ == "__main__":
     main()
