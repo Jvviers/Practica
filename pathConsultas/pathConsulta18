@@ -1,0 +1,11 @@
+count(p)
+42509796
+Plan: "PROFILE"
+Statement: "READ_ONLY"
+Version: "5"
+Planner: "COST"
+Runtime: "SLOTTED"
+Time: 13235
+DbHits: 44076212
+Rows: 1
+Memory (Bytes): 48896
