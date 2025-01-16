@@ -24,29 +24,25 @@ def execute_query(i, query):
     # Manejar errores
     if er:
         print(f"Error en la consulta {i+1}: {er}")
-        return f"Consulta {i+1}: Error: {er}\n"
+        return f"Error: {er}\n"
 
-    # Retornar los caminos obtenidos
-    return f"Consulta {i+1}:\n{res}\n\n"
-
-# Guardar resultados en un archivo
-def save_results(results, file_path):
+    # Guardar los caminos en un archivo separado
+    file_path = f"pathConsulta{i+1}"
     try:
         with open(file_path, "w") as file:
-            file.writelines(results)
+            file.write(res + "\n")
+        print(f"Resultados guardados en: {file_path}")
     except Exception as e:
         print(f"Error al guardar los resultados: {e}")
         sys.exit(1)
 
+    return f"Resultados de la consulta {i+1} guardados en {file_path}\n"
+
 def main():
     queries = read_queries("consultasbd03") 
-    results = []
     for i, query in enumerate(queries):
         res = execute_query(i, query)
-        results.append(res)
         print(res)
-
-    save_results(results, "")
 
 if __name__ == "__main__":
     main()
