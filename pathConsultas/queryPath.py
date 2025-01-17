@@ -37,12 +37,12 @@ def parse_result(raw_result):
             line = line.replace("[:Nodes {id: ", "")
             line = line.replace(", label: ", "")
             line = line.replace("}]", "")
-            line = line.replace("[:Nodes {id: ", "")
             line = line.replace("[", "")
             line = line.replace("]", "")
             line.replace('"', "")
             xd = line.split(" ")
             xd = set(xd)
+            print (xd)
             line = " ".join(xd)
             lel.append(line)
             
