@@ -26,33 +26,20 @@ def parse_result(raw_result):
         for element in elements:
             if "]->" in element:
                 relation, node = element.split("]->")
-                parsed_line.append(f"{relation.strip()} {node.strip()}")
+                relation = relation.strip().split(":")[-1]  # Eliminar prefijos innecesarios
+                node = node.strip().split(":")[-1]  # Usar solo el valor limpio del nodo
+                parsed_line.append(f"{relation} {node}")
             else:
-                parsed_line.append(f"{element.strip()}")
+                node = element.strip().split(":")[-1]  # Limpieza del nodo inicial
+                parsed_line.append(node)
 
-        # Limpieza de la línea
+        # Crear una línea combinada única
         line = " ".join(parsed_line)
-        line = line.replace("[:Nodes {id: ", "")
-        line = line.replace(", label: ", "")
-        line = line.replace("}]", "")
-        line = line.replace("[", "")
-        line = line.replace("]", "")
-        line = line.replace('"', ' ')  # Reemplazar comillas
         line = " ".join(line.split())  # Eliminar espacios adicionales
-
         lel.add(line)  # Agregar al conjunto para evitar duplicados
             
-    # Combinar los nodos y relaciones únicos en una sola línea
-    result = []
-    for line in lel:
-        parts = line.split()
-        unique_parts = []
-        for part in parts:
-            if part not in unique_parts:
-                unique_parts.append(part)
-        result.append(" ".join(unique_parts))
-
-    return "\n".join(sorted(result))  # Ordenar las líneas al final (opcional)
+    # Unificar las líneas únicas en la salida
+    return "\n".join(sorted(lel))  # Ordenar las líneas (opcional)
 
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
@@ -91,4 +78,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
