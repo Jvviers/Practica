@@ -33,12 +33,12 @@ def parse_result(raw_result):
         parsed_lines.append(" ".join(parsed_line))
 
         for line in parsed_lines:
-            line.replace("[:Nodes {id: ", "")
-            line.replace(", label: ", "")
-            line.replace("}]", "")
-            line.replace("[:Nodes {id: ", "")
-            line.replace("[", "")
-            line.replace("]", "")
+            line =line.replace("[:Nodes {id: ", "")
+            line =line.replace(", label: ", "")
+            line = line.replace("}]", "")
+            line =line.replace("[:Nodes {id: ", "")
+            line = line.replace("[", "")
+            line =  line.replace("]", "")
     
     return "\n".join(parsed_lines)
 
