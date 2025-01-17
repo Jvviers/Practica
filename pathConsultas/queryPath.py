@@ -14,6 +14,8 @@ def read_queries(file_path):
 
 def parse_result(raw_result):
     parsed_lines = []
+    extracted_elements = set()
+
     for line in raw_result.splitlines():
         # Omitir la línea que contiene el nombre de la tabla ("p")
         if line.strip() == "p":
@@ -27,12 +29,14 @@ def parse_result(raw_result):
             if "]->" in element:
                 relation, node = element.split("]->")
                 parsed_line.append(f"[{relation.strip()}] [{node.strip()}]")
+                extracted_elements.update([relation.strip(), node.strip()])
             else:
                 parsed_line.append(f"[{element.strip()}]")
+                extracted_elements.add(element.strip())
 
         parsed_lines.append(" ".join(parsed_line))
     
-    return "\n".join(parsed_lines)
+    return "\n".join(parsed_lines), extracted_elements
 
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
@@ -49,10 +53,10 @@ def execute_query(i, query):
         return f"Error: {er}\n"
 
     # Parsear el resultado
-    parsed_result = parse_result(raw_result)
+    parsed_result, extracted_elements = parse_result(raw_result)
 
     # Guardar los caminos en un archivo separado
-    file_path = f"pathConsulta{i+1}"
+    file_path = f"pathConsulta{i+1}.txt"
     try:
         with open(file_path, "w") as file:
             file.write(parsed_result + "\n")
@@ -61,10 +65,20 @@ def execute_query(i, query):
         print(f"Error al guardar los resultados: {e}")
         sys.exit(1)
 
-    return f"Resultados de la consulta {i+1} guardados en {file_path}\n"
+    # Guardar los elementos extraídos sin duplicados
+    elements_file_path = f"elementsConsulta{i+1}.txt"
+    try:
+        with open(elements_file_path, "w") as file:
+            file.write("\n".join(extracted_elements) + "\n")
+        print(f"Elementos extraídos guardados en: {elements_file_path}")
+    except Exception as e:
+        print(f"Error al guardar los elementos: {e}")
+        sys.exit(1)
+
+    return f"Resultados de la consulta {i+1} guardados en {file_path}\nElementos guardados en {elements_file_path}\n"
 
 def main():
-    queries = read_queries("consultaspathbd03") 
+    queries = read_queries("consultasbd03") 
     for i, query in enumerate(queries):
         res = execute_query(i, query)
         print(res)
