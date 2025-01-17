@@ -26,20 +26,23 @@ def parse_result(raw_result):
         for element in elements:
             if "]->" in element:
                 relation, node = element.split("]->")
-                relation = relation.strip().split(":")[-1]  # Eliminar prefijos innecesarios
-                node = node.strip().split(":")[-1]  # Usar solo el valor limpio del nodo
-                parsed_line.append(f"{relation} {node}")
+                parsed_line.append(f"[{relation.strip()}] [{node.strip()}]")
             else:
-                node = element.strip().split(":")[-1]  # Limpieza del nodo inicial
-                parsed_line.append(node)
+                parsed_line.append(f"[{element.strip()}]")
 
-        # Crear una línea combinada única
+        # Limpieza de la línea
         line = " ".join(parsed_line)
+        line = line.replace("[:Nodes {id: ", "")
+        line = line.replace(", label: ", "")
+        line = line.replace("}]", "")
+        line = line.replace("[", "")
+        line = line.replace("]", "")
+        line = line.replace('"', ' ')  # Reemplazar comillas
         line = " ".join(line.split())  # Eliminar espacios adicionales
+
         lel.add(line)  # Agregar al conjunto para evitar duplicados
             
-    # Unificar las líneas únicas en la salida
-    return "\n".join(sorted(lel))  # Ordenar las líneas (opcional)
+    return "\n".join(sorted(lel))  # Ordenar las líneas al final (opcional)
 
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
