@@ -41,6 +41,7 @@ def parse_result(raw_result):
             line = line.replace("[", "")
             line = line.replace("]", "")
             line.replace('"', "")
+            print (line)
             xd = line.split(" ")
             xd = set(xd)
             print (xd)
