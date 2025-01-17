@@ -32,15 +32,15 @@ def parse_result(raw_result):
 
         parsed_lines.append(" ".join(parsed_line))
 
-        for line in parsed_lines:
-            print(line)
-            line = line.replace("[:Nodes {id: ", "")
-            line = line.replace(", label: ", "")
-            line = line.replace("}]", "")
-            line = line.replace("[:Nodes {id: ", "")
-            line = line.replace("[", "")
-            line = line.replace("]", "")
-            print(line)
+        for idx, line in enumerate(parsed_lines):
+            
+            parsed_lines[idx] = line.replace("[:Nodes {id: ", "")
+            parsed_lines[idx] = line.replace(", label: ", "")
+            parsed_lines[idx] = line.replace("}]", "")
+            parsed_lines[idx] = line.replace("[:Nodes {id: ", "")
+            parsed_lines[idx] = line.replace("[", "")
+            parsed_lines[idx] = line.replace("]", "")
+            
     
     return "\n".join(parsed_lines)
 
