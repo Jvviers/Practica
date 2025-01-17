@@ -31,6 +31,14 @@ def parse_result(raw_result):
                 parsed_line.append(f"[{element.strip()}]")
 
         parsed_lines.append(" ".join(parsed_line))
+
+        for line in parsed_lines:
+            line.replace("[:Nodes {id: ", "")
+            line.replace(", label: ", "")
+            line.replace("}]", "")
+            line.replace("[:Nodes {id: ", "")
+            line.replace("[", "")
+            line.replace("]", "")
     
     return "\n".join(parsed_lines)
 
