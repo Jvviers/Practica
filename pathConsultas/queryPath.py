@@ -13,6 +13,7 @@ def read_queries(file_path):
         sys.exit(1)
 
 def parse_result(raw_result):
+    lel = []
     parsed_lines = []
     for line in raw_result.splitlines():
         # Omitir la línea que contiene el nombre de la tabla ("p")
@@ -33,16 +34,16 @@ def parse_result(raw_result):
         parsed_lines.append(" ".join(parsed_line))
 
         for idx, line in enumerate(parsed_lines):
-            
-            parsed_lines[idx] = line.replace("[:Nodes {id: ", "")
-            parsed_lines[idx] = line.replace(", label: ", "")
-            parsed_lines[idx] = line.replace("}]", "")
-            parsed_lines[idx] = line.replace("[:Nodes {id: ", "")
-            parsed_lines[idx] = line.replace("[", "")
-            parsed_lines[idx] = line.replace("]", "")
+            line = line.replace("[:Nodes {id: ", "")
+            line = line.replace(", label: ", "")
+            line = line.replace("}]", "")
+            line = line.replace("[:Nodes {id: ", "")
+            line = line.replace("[", "")
+            line = line.replace("]", "")
+            lel.append(line)
             
     
-    return "\n".join(parsed_lines)
+    return "\n".join(lel)
 
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
