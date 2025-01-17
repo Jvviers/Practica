@@ -41,7 +41,7 @@ def parse_result(raw_result):
             line = line.replace("[", "")
             line = line.replace("]", "")
             line.replace('"', ' " ')
-            line = line.replace('"', '')
+            line = line.replace('"', ' ')
             # print (line)
             xd = line.split(" ")
             res = []
