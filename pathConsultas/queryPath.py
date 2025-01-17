@@ -37,7 +37,8 @@ def parse_result(raw_result):
         clean_line = clean_line.replace("[:Nodes {id: ", "").replace(", label: ", "")
         clean_line = clean_line.replace("}]", "").replace("[", "").replace("]", "")
         clean_line = clean_line.replace('"', ' ').strip()  # Eliminar comillas y espacios extra
-
+        clean_line = clean_line.replace(":Nodes {id: ", "").replace(", label: ", "")
+        clean_line = clean_line.replace("}", "").replace(", label: ", "")
         # Reducir elementos redundantes como "f97 f97"
         parts = clean_line.split()
         unique_parts = []
@@ -46,6 +47,8 @@ def parse_result(raw_result):
             if part not in seen:
                 unique_parts.append(part)
                 seen.add(part)
+
+
 
         # Agregar la línea limpia y única al conjunto
         lel.add(" ".join(unique_parts))
