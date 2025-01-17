@@ -12,13 +12,35 @@ def read_queries(file_path):
         print(f"Error al leer el archivo: {e}")
         sys.exit(1)
 
+def parse_result(raw_result):
+    parsed_lines = []
+    for line in raw_result.splitlines():
+        # Omitir la línea que contiene el nombre de la tabla ("p")
+        if line.strip() == "p":
+            continue
+        
+        # Parsear la línea para extraer nodos y relaciones
+        elements = line.replace("(", "").replace(")", "").split("-[:")
+        parsed_line = []
+
+        for element in elements:
+            if "]->" in element:
+                relation, node = element.split("]->")
+                parsed_line.append(f"[{relation.strip()}] [{node.strip()}]")
+            else:
+                parsed_line.append(f"[{element.strip()}]")
+
+        parsed_lines.append(" ".join(parsed_line))
+    
+    return "\n".join(parsed_lines)
+
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
     command = f"echo \"{query}\" | cypher-shell -u neo4j -p neo4j2024"
     result = subprocess.run(command, shell=True, text=True, capture_output=True)
     
     # Obtener resultados
-    res = result.stdout.strip()
+    raw_result = result.stdout.strip()
     er = result.stderr.strip()
 
     # Manejar errores
@@ -26,11 +48,14 @@ def execute_query(i, query):
         print(f"Error en la consulta {i+1}: {er}")
         return f"Error: {er}\n"
 
+    # Parsear el resultado
+    parsed_result = parse_result(raw_result)
+
     # Guardar los caminos en un archivo separado
-    file_path = f"pathConsulta{i+1}"
+    file_path = f"pathConsulta{i+1}.txt"
     try:
         with open(file_path, "w") as file:
-            file.write(res + "\n")
+            file.write(parsed_result + "\n")
         print(f"Resultados guardados en: {file_path}")
     except Exception as e:
         print(f"Error al guardar los resultados: {e}")
@@ -39,7 +64,7 @@ def execute_query(i, query):
     return f"Resultados de la consulta {i+1} guardados en {file_path}\n"
 
 def main():
-    queries = read_queries("consultaspathbd03") 
+    queries = read_queries("consultasbd03") 
     for i, query in enumerate(queries):
         res = execute_query(i, query)
         print(res)
