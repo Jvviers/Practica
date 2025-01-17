@@ -2,76 +2,82 @@ import subprocess
 import sys
 
 def read_queries(file_path):
-    """
-    Lee las consultas desde un archivo y las devuelve como una lista de cadenas.
-    """
     try:
         with open(file_path, "r") as file:
             return [line.strip() for line in file if line.strip()]
     except FileNotFoundError:
-        sys.exit(f"Archivo no encontrado: {file_path}")
+        print(f"Archivo no encontrado: {file_path}")
+        sys.exit(1)
     except Exception as e:
-        sys.exit(f"Error al leer el archivo: {e}")
+        print(f"Error al leer el archivo: {e}")
+        sys.exit(1)
 
 def parse_result(raw_result):
-    """
-    Parsea el resultado crudo de una consulta y lo transforma en un formato limpio.
-    """
-    cleaned_lines = []
-
+    lel = set()  # Usamos un conjunto para evitar duplicados
     for line in raw_result.splitlines():
+        # Omitir la línea que contiene el nombre de la tabla ("p")
         if line.strip() == "p":
             continue
+        
+        # Parsear la línea para extraer nodos y relaciones
+        elements = line.replace("(", "").replace(")", "").split("-[:")
+        parsed_line = []
 
-        line = (
-            line.replace("[:Nodes {id: ", "")
-            .replace(", label: ", "")
-            .replace("}]", "")
-            .replace("(", "")
-            .replace(")", "")
-            .replace("[", "")
-            .replace("]", "")
-            .replace('"', " ")
-        )
+        for element in elements:
+            if "]->" in element:
+                relation, node = element.split("]->")
+                parsed_line.append(f"[{relation.strip()}] [{node.strip()}]")
+            else:
+                parsed_line.append(f"[{element.strip()}]")
 
-        unique_elements = list(dict.fromkeys(line.split()))  # Elimina duplicados preservando el orden
-        cleaned_lines.append(" ".join(unique_elements))
+        # Limpieza de la línea
+        line = " ".join(parsed_line)
+        line = line.replace("[:Nodes {id: ", "")
+        line = line.replace(", label: ", "")
+        line = line.replace("}]", "")
+        line = line.replace("[", "")
+        line = line.replace("]", "")
+        line = line.replace('"', ' ')  # Reemplazar comillas
+        line = " ".join(line.split())  # Eliminar espacios adicionales
 
-    return "\n".join(cleaned_lines)
+        lel.add(line)  # Agregar al conjunto para evitar duplicados
+            
+    return "\n".join(sorted(lel))  # Ordenar las líneas al final (opcional)
 
-def execute_query(index, query):
-    """
-    Ejecuta una consulta Cypher usando cypher-shell y guarda el resultado.
-    """
+def execute_query(i, query):
+    # Ejecutar la consulta utilizando cypher-shell
     command = f"echo \"{query}\" | cypher-shell -u neo4j -p neo4j2024"
     result = subprocess.run(command, shell=True, text=True, capture_output=True)
+    
+    # Obtener resultados
+    raw_result = result.stdout.strip()
+    er = result.stderr.strip()
 
-    if result.stderr.strip():
-        return f"Error en la consulta {index + 1}: {result.stderr.strip()}\n"
+    # Manejar errores
+    if er:
+        print(f"Error en la consulta {i+1}: {er}")
+        return f"Error: {er}\n"
 
-    parsed_result = parse_result(result.stdout.strip())
-    file_path = f"pathConsulta{index + 1}"
+    # Parsear el resultado
+    parsed_result = parse_result(raw_result)
 
+    # Guardar los caminos en un archivo separado
+    file_path = f"pathConsulta{i+1}"
     try:
         with open(file_path, "w") as file:
             file.write(parsed_result + "\n")
-        return f"Resultados de la consulta {index + 1} guardados en {file_path}\n"
+        print(f"Resultados guardados en: {file_path}")
     except Exception as e:
-        return f"Error al guardar los resultados de la consulta {index + 1}: {e}\n"
+        print(f"Error al guardar los resultados: {e}")
+        sys.exit(1)
+
+    return f"Resultados de la consulta {i+1} guardados en {file_path}\n"
 
 def main():
-    """
-    Lee las consultas desde un archivo y las ejecuta secuencialmente.
-    """
-    input_file = "consultaspathbd03"
-    queries = read_queries(input_file)
-
-    if not queries:
-        sys.exit(f"El archivo {input_file} no contiene consultas válidas.")
-
-    for index, query in enumerate(queries):
-        result = execute_query(index, query)
-        print(result)
+    queries = read_queries("consultaspathbd03") 
+    for i, query in enumerate(queries):
+        res = execute_query(i, query)
+        print(res)
 
 if __name__ == "__main__":
     main()
