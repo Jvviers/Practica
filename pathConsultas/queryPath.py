@@ -40,7 +40,7 @@ def parse_result(raw_result):
             line = line.replace("[:Nodes {id: ", "")
             line = line.replace("[", "")
             line = line.replace("]", "")
-            line.replace("\n", "")
+            line.replace("\"", "")
             xd = line.split(" ")
             xd = set(xd)
             line = " ".join(xd)
