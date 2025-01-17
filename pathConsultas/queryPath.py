@@ -26,9 +26,9 @@ def parse_result(raw_result):
         for element in elements:
             if "]->" in element:
                 relation, node = element.split("]->")
-                parsed_line.append(f"[{relation.strip()}] [{node.strip()}]")
+                parsed_line.append(f"{relation.strip()} {node.strip()}")
             else:
-                parsed_line.append(f"[{element.strip()}]")
+                parsed_line.append(f"{element.strip()}")
 
         # Limpieza de la línea
         line = " ".join(parsed_line)
@@ -42,7 +42,17 @@ def parse_result(raw_result):
 
         lel.add(line)  # Agregar al conjunto para evitar duplicados
             
-    return "\n".join(sorted(lel))  # Ordenar las líneas al final (opcional)
+    # Combinar los nodos y relaciones únicos en una sola línea
+    result = []
+    for line in lel:
+        parts = line.split()
+        unique_parts = []
+        for part in parts:
+            if part not in unique_parts:
+                unique_parts.append(part)
+        result.append(" ".join(unique_parts))
+
+    return "\n".join(sorted(result))  # Ordenar las líneas al final (opcional)
 
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
@@ -81,3 +91,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
