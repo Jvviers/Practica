@@ -64,7 +64,7 @@ def execute_query(i, query):
     return f"Resultados de la consulta {i+1} guardados en {file_path}\n"
 
 def main():
-    queries = read_queries("consultasbd03") 
+    queries = read_queries("consultaspathbd03") 
     for i, query in enumerate(queries):
         res = execute_query(i, query)
         print(res)
