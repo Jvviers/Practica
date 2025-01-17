@@ -52,7 +52,7 @@ def execute_query(i, query):
     parsed_result = parse_result(raw_result)
 
     # Guardar los caminos en un archivo separado
-    file_path = f"pathConsulta{i+1}.txt"
+    file_path = f"pathConsulta{i+1}"
     try:
         with open(file_path, "w") as file:
             file.write(parsed_result + "\n")
