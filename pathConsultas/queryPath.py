@@ -13,13 +13,13 @@ def read_queries(file_path):
         sys.exit(1)
 
 def parse_result(raw_result):
-    lel = []
     parsed_lines = []
+
     for line in raw_result.splitlines():
         # Omitir la línea que contiene el nombre de la tabla ("p")
         if line.strip() == "p":
             continue
-        
+
         # Parsear la línea para extraer nodos y relaciones
         elements = line.replace("(", "").replace(")", "").split("-[:")
         parsed_line = []
@@ -31,34 +31,23 @@ def parse_result(raw_result):
             else:
                 parsed_line.append(f"[{element.strip()}]")
 
-        parsed_lines.append(" ".join(parsed_line))
+        # Procesar y limpiar la línea parseada
+        line_cleaned = " ".join(parsed_line)
+        line_cleaned = line_cleaned.replace("[:Nodes {id: ", "")
+        line_cleaned = line_cleaned.replace(", label: ", "")
+        line_cleaned = line_cleaned.replace("}]", "")
+        line_cleaned = line_cleaned.replace("[", "").replace("]", "")
+        line_cleaned = " ".join(dict.fromkeys(line_cleaned.split()))  # Eliminar duplicados
 
-        for idx, line in enumerate(parsed_lines):
-            # print(line)
-            line = line.replace("[:Nodes {id: ", "")
-            line = line.replace(", label: ", "")
-            line = line.replace("}]", "")
-            line = line.replace("[", "")
-            line = line.replace("]", "")
-            line.replace('"', ' " ')
-            line = line.replace('"', ' ')
-            # print (line)
-            xd = line.split(" ")
-            res = []
-            for i in xd:
-                if i not in res:
-                    res.append(i)
-            line = " ".join(res)
-            lel.append(line)
-            
-    
-    return "\n".join(lel)
+        parsed_lines.append(line_cleaned)
+
+    return "\n".join(parsed_lines)
 
 def execute_query(i, query):
     # Ejecutar la consulta utilizando cypher-shell
     command = f"echo \"{query}\" | cypher-shell -u neo4j -p neo4j2024"
     result = subprocess.run(command, shell=True, text=True, capture_output=True)
-    
+
     # Obtener resultados
     raw_result = result.stdout.strip()
     er = result.stderr.strip()
